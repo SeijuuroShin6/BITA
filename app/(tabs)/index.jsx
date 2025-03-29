@@ -1,9 +1,11 @@
-import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native'
-import React from 'react'
-import MyLogo from "@/assets/images/trophy-logo.png"
+import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import React from 'react';
+import MyLogo from "@/assets/images/trophy-logo.png";
 
 
 const App = () => {
+
+
   return (      
 
      <View style={styles.container}>
@@ -13,10 +15,9 @@ const App = () => {
      </View>
 
     <Text style={styles.slogan}>L'élite du <Text style={styles.span}>jeu</Text>, réunie en une seule <Text style={styles.span}>arène !</Text>
-      
-      
       </Text>     
-    <Image source={MyLogo} style={styles.logoImage} resizeMode='center'></Image> 
+    
+    <Image source={MyLogo} style={styles.logoImage} resizeMode='contain'></Image> 
 
       <TouchableOpacity style={styles.loginButton}> 
          <Text style={styles.logButtonText}>CONNEXION</Text>
@@ -40,6 +41,7 @@ const styles = StyleSheet.create({
   
   container: {
     flex: 1,
+    position: 'relative',
     flexDirection: 'column',
     height: '100%',
     width: '100%',
@@ -64,7 +66,11 @@ const styles = StyleSheet.create({
     paddingTop: 40, 
     marginBottom: -100,
    },
-   
+   logoImage: {
+    marginTop: 130,
+    height: '300'
+   },
+
    span: {
     color: '#D70040',
    },
@@ -78,6 +84,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#D70040',
     borderRadius: 40,   
     fontWeight: '800',
+    position: 'absolute',
+    bottom: 220,
+    left: 50,
    },
 
      logButtonText: {
@@ -97,6 +106,9 @@ const styles = StyleSheet.create({
     borderColor: 'black',
     borderWidth: 3,
     borderRadius: 40,   
+    position: 'absolute',
+    bottom: 150,
+    left: 50,
   },
   registerButtonText: {
     fontSize: 20,
@@ -104,10 +116,12 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
  },
 
- inviteText: {
-  textAlign: 'center',
-  paddingTop: 20,
-  color: '#D70040',
-  fontWeight: 'light'
- }
+  inviteText: {
+   textAlign: 'center',
+   paddingTop: 20,
+   color: '#D70040',
+   fontWeight: 'light',
+   position: 'absolute',
+   bottom: 100,
+ },
 })
