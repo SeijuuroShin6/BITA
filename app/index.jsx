@@ -1,14 +1,21 @@
-import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity, Pressable } from 'react-native';
 import React from 'react';
 import MyLogo from "@/assets/images/trophy-logo.png";
-
+import { Link } from 'expo-router';
 
 const App = () => {
 
+// Ajoutez les composants Link et Pressable sur mes deux lookalike button "CONNEXION" et "S'INSCRIRE"
 
   return (      
 
      <View style={styles.container}>
+
+     <Link href="/explore" style={{ marginHorizontal: 'auto'}} asChild>
+     <Pressable>
+      <Text>Explore</Text>
+     </Pressable>
+     </Link>
      
      <View style={styles.title}> 
       <Text style={styles.text}>BITA</Text>
@@ -54,7 +61,6 @@ const styles = StyleSheet.create({
     fontSize: 100,
     fontWeight: 'bold',
     textAlign: 'center',
-    paddingTop: 60,
    },
    
    slogan: {
@@ -85,7 +91,7 @@ const styles = StyleSheet.create({
     borderRadius: 40,   
     fontWeight: '800',
     position: 'absolute',
-    bottom: 220,
+    bottom: 150,
     left: 50,
    },
 
@@ -107,7 +113,7 @@ const styles = StyleSheet.create({
     borderWidth: 3,
     borderRadius: 40,   
     position: 'absolute',
-    bottom: 150,
+    bottom: 90,
     left: 50,
   },
   registerButtonText: {
@@ -122,6 +128,12 @@ const styles = StyleSheet.create({
    color: '#D70040',
    fontWeight: 'light',
    position: 'absolute',
-   bottom: 100,
+   bottom: 30,
+   textDecorationLine: 'underline',
+ },
+
+ buttonText: {
+  color: 'blue',
+
  },
 })
