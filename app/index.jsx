@@ -1,23 +1,17 @@
-import { View, Text, StyleSheet, Image, TouchableOpacity, Pressable } from 'react-native';
+import { View, Text, StyleSheet, Image, Pressable } from 'react-native';
 import React from 'react';
 import MyLogo from "@/assets/images/trophy-logo.png";
 import { Link } from 'expo-router';
 
 const App = () => {
 
-// Ajoutez les composants Link et Pressable sur mes deux lookalike button "CONNEXION" et "S'INSCRIRE"
 
   return (      
 
      <View style={styles.container}>
 
-     <Link href="/explore" style={{ marginHorizontal: 'auto'}} asChild>
-     <Pressable>
-      <Text>Explore</Text>
-     </Pressable>
-     </Link>
      
-     <View style={styles.title}> 
+     <View> 
       <Text style={styles.text}>BITA</Text>
      </View>
 
@@ -26,16 +20,24 @@ const App = () => {
     
     <Image source={MyLogo} style={styles.logoImage} resizeMode='contain'></Image> 
 
-      <TouchableOpacity style={styles.loginButton}> 
-         <Text style={styles.logButtonText}>CONNEXION</Text>
-      </TouchableOpacity>
+      <Link href="" asChild>
+          <Pressable style={styles.loginButton}> 
+            <Text style={styles.logButtonText}>CONNEXION</Text>
+         </Pressable>
+      </Link>
 
-    <TouchableOpacity style={styles.registerButton}> 
-      <Text style={styles.registerButtonText}>S'INSCRIRE</Text>
-     </TouchableOpacity>
+    <Link href="" asChild>
+        <Pressable style={styles.registerButton}> 
+          <Text style={styles.registerButtonText}>S'INSCRIRE</Text>
+      </Pressable> 
+     </Link>
   
-      <Text style={styles.inviteText}>Continuer en tant qu'invité</Text>
-      
+      <Link href="/intro_screen" style={styles.inviteContainer} asChild> 
+         <Pressable>
+           <Text style={styles.inviteText}>Continuer en tant qu'invité</Text> 
+        </Pressable>
+      </Link>
+
   </View>      
 
   )
@@ -61,6 +63,7 @@ const styles = StyleSheet.create({
     fontSize: 100,
     fontWeight: 'bold',
     textAlign: 'center',
+    marginTop: 10,
    },
    
    slogan: {
@@ -122,18 +125,16 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
  },
 
+ inviteContainer: {
+  alignItems: 'center',
+  justifyContent: 'center',
+  textAlign: 'center',
+  position: 'absolute',
+  bottom: 40,
+},
   inviteText: {
    textAlign: 'center',
    paddingTop: 20,
    color: '#D70040',
-   fontWeight: 'light',
-   position: 'absolute',
-   bottom: 30,
-   textDecorationLine: 'underline',
- },
-
- buttonText: {
-  color: 'blue',
-
  },
 })
