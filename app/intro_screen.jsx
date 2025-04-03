@@ -4,13 +4,20 @@ import { Link } from 'expo-router';
 import bbBall from "@/assets/images/basketball-logo.png";
 import bsbBall from "@/assets/images/baseball-logo.png";
 import fbBall from "@/assets/images/american-football-logo.png";
-
+import AntDesign from '@expo/vector-icons/AntDesign';
 
 
 
 const introScreen = () => {
     return (
 <View style={styles.mainContainer}> 
+
+      <View style={styles.arrowLinkContainer}> 
+         <Link href="/"> 
+           <AntDesign name="arrowleft" size={40} color="#D70040"/>
+         </Link>
+      </View>
+
 
        <View style={styles.introTextContainer}>
          <Text style={styles.introText}>Baseball, Basketball ou Football Américain</Text>
@@ -70,6 +77,12 @@ const styles = StyleSheet.create({
     position: 'relative',
    },
 
+   arrowLinkContainer: {
+    position: 'absolute',
+    top: 20,
+    left: 30,
+   },
+
   introTextContainer: {
     marginTop: 130,
     justifyContent: 'center',
@@ -121,7 +134,7 @@ const styles = StyleSheet.create({
   
   outroTextContainer: {
    position: 'absolute',
-   bottom: 100,
+   bottom: 70,
   },
 
   outroText: {
