@@ -16,6 +16,8 @@ const nbaScreen = () => {
 
      <Text style={styles.mainTitle}>MLB</Text>
 
+          <Text style={styles.mainSlogan}>Là ou les records s'écrivent au bout de <Text style={styles.spanText}>bois !</Text></Text>
+     
 
 
     </View>
@@ -45,14 +47,23 @@ const styles = StyleSheet.create({
     left: 30,
    },
 
-  mainTitle: {
+   mainTitle: {
     fontSize: 50,
     textAlign: 'center',
     color: '#D70040',
     marginTop: 5,
     fontWeight: 'bold',
-  }
-
+  },
+  mainSlogan: {
+    textAlign: 'center',
+    fontSize: 40,
+    fontWeight: 'bold',
+    paddingTop: 50,
+  },
+   spanText: {
+    color: '#D70040',
+   },
+  
 
 
 })

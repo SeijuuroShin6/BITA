@@ -16,7 +16,7 @@ const nbaScreen = () => {
 
      <Text style={styles.mainTitle}>NFL</Text>
 
-
+     <Text style={styles.mainSlogan}>Chaque <Text style={styles.spanText}>yard</Text> compte, chaque seconde aussi !</Text>
 
     </View>
 
@@ -51,8 +51,16 @@ const styles = StyleSheet.create({
     color: '#D70040',
     marginTop: 5,
     fontWeight: 'bold',
-  }
-
-
+  },
+  mainSlogan: {
+    textAlign: 'center',
+    fontSize: 35,
+    fontWeight: 'bold',
+    paddingTop: 50,
+  },
+   spanText: {
+    color: '#D70040',
+   },
+  
 
 })

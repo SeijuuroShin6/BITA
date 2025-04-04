@@ -16,7 +16,8 @@ const nbaScreen = () => {
 
      <Text style={styles.mainTitle}>NBA</Text>
 
-
+          <Text style={styles.mainSlogan}>Là ou le <Text style={styles.spanText}>jeu</Text> devient légende !</Text>
+    
 
     </View>
 
@@ -45,13 +46,23 @@ const styles = StyleSheet.create({
     left: 30,
    },
 
-  mainTitle: {
+   mainTitle: {
     fontSize: 50,
     textAlign: 'center',
     color: '#D70040',
     marginTop: 5,
     fontWeight: 'bold',
-  }
+  },
+  mainSlogan: {
+    textAlign: 'center',
+    fontSize: 40,
+    fontWeight: 'bold',
+    paddingTop: 50,
+  },
+   spanText: {
+    color: '#D70040',
+   },
+  
 
 
 
